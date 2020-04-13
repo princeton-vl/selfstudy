@@ -5,7 +5,6 @@ hyperopt==0.1.2
 imageio==2.4.1
 nevergrad==0.3.0
 numpy==1.16.0
-Pillow==5.3.0
 ray==0.8.4
 scikit-image==0.15.0
 tensorboardX==2.0
