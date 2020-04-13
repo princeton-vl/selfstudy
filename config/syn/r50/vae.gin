@@ -1,0 +1,58 @@
+# Parameters for session:
+# ==============================================================================
+session.task = 'VAETask'
+session.dataset = 'SynDataset'
+session.restore_session = None
+session.train_iters = -1
+session.valid_iters = -1
+
+# Parameters for dataset:
+# ==============================================================================
+BaseDataset.double_sample = False
+BaseDataset.input_res = 64
+BaseDataset.max_images = 50000
+BaseDataset.semisupervised = None
+BaseDataset.predict_pose = True
+BaseDataset.remote_loading = True
+SynDataset.dataset_choice = 'TCVL'
+
+# Parameters for augment:
+# ==============================================================================
+augment.grayscale = True
+augment.color_jitter = True
+augment.crop = True
+augment.cutout = False
+augment.flip = True
+
+# Parameters for optimizer:
+# ==============================================================================
+optimizer.optim_fn = 'Adam'
+optimizer.weight_decay = 1e-5
+optimizer.betas = (0.8, 0.999)
+optimizer.eps = 1e-8
+
+scheduler.target_lrs = [0, .001, 1e-5]
+scheduler.milestones = [5, 800]
+dataloader.batch_size = 384
+
+# Parameters for model:
+# ==============================================================================
+Wrapper.model_choice = 'vae'
+Wrapper.out_classes = [10, 5]
+Wrapper.pretrained = None
+Wrapper.finetune_classifier = False
+Wrapper.run_selfsup = True
+
+init_resnet.choice = 'resnet50'
+ResNet.feat_layer = -1
+ResNet.freeze_at_k = None
+ResNet.is_half = False
+ResNet.out_feats = 256
+ResNet.prepool_fc = True
+ResNet.replace_stride_with_dilation = None
+ResNet.skip_init_pool = True
+
+VAEModel.output_res = 64
+VAEModel.inpainting = False
+VAEModel.do_reparameterize = True
+VAETask.lmd = 1e-5

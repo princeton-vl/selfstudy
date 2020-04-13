@@ -1,0 +1,21 @@
+# Parameters for dataloader:
+# ==============================================================================
+dataloader.batch_size = 384
+dataloader.num_workers = 0
+dataloader.shuffle = True
+
+# Parameters for dataset:
+# ==============================================================================
+BaseDataset.double_sample = False
+BaseDataset.input_res = 32
+BaseDataset.max_images = 50000
+BaseDataset.semisupervised = None
+BaseDataset.predict_pose = False
+BaseDataset.remote_loading = False
+
+augment.color_jitter = True
+augment.crop = True
+augment.cutout = True
+augment.flip = True
+
+session.dataset = 'CIFARDataset'

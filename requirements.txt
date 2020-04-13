@@ -1,0 +1,14 @@
+apex==0.1
+gin-config==0.2.0
+h5py==2.8.0
+hyperopt==0.1.2
+imageio==2.4.1
+nevergrad==0.3.0
+numpy==1.16.0
+Pillow==5.3.0
+ray==0.8.4
+scikit-image==0.15.0
+tensorboardX==2.0
+torch==1.2.0
+torchvision==0.4.0
+tqdm==4.28.1
