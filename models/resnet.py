@@ -294,7 +294,7 @@ class ResNet(nn.Module):
       all_feats += [self.fc(x).permute(0,3,1,2)]
       all_feats += [pool_and_flatten(all_feats[-1])]
     else:
-      all_feats += [self.fc(pool_and_flatten(x))]
+      all_feats += [self.fc(pool_and_flatten(all_feats[-1]))]
 
     feats = all_feats[-1]
     if self.feat_layer != -1:
