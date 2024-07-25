@@ -8,6 +8,6 @@ numpy==1.16.0
 ray==0.8.4
 scikit-image==0.15.0
 tensorboardX==2.0
-torch==1.2.0
+torch==2.2.0
 torchvision==0.4.0
 tqdm==4.28.1
